@@ -1,0 +1,28 @@
+### weryfikator poprawności PESEL
+
+print("Sprawdzenie poprawności numeru PESEL")
+while True:
+
+    PESEL = (input("Podaj numer PESEL: "))
+    lista = []
+
+    for i in PESEL:
+        lista.append(i)
+    a = int(lista[0])
+    b = int(lista[1])
+    c = int(lista[2])
+    d = int(lista[3])
+    e = int(lista[4])
+    f = int(lista[5])
+    g = int(lista[6])
+    h = int(lista[7])
+    i = int(lista[8])
+    j = int(lista[9])
+    k = int(lista[10])
+
+    #poniższy algorytm wyciągnięty z ogólnodostępnych informacji odnośnie weryfikacji cyfr kontrolnych w numerze PESEL
+    suma = 1*a + 3*b + 7*c + 9*d + 1*e + 3*f + 7*g + 9*h + 1*i + 3*j + 1*k
+    if suma%10 == 0:
+        print("PESEL jest poprawny")
+    else:
+        print("PESEL nie jest poprawny")
